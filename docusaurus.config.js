@@ -35,17 +35,6 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -53,7 +42,48 @@ const config = {
       }),
     ],
   ],
-
+  plugins: [
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "code-snippets",
+        path: "code-snippets",
+        routeBasePath: "code-snippets",
+        sidebarPath: require.resolve("./sidebarcodesnippets.js"),
+      }),
+    ],
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "cheat-sheets",
+        path: "cheat-sheets",
+        routeBasePath: "cheat-sheets",
+        sidebarPath: require.resolve("./sidebarcheatsheets.js"),
+      }),
+    ],
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "references",
+        path: "references",
+        routeBasePath: "references",
+        sidebarPath: require.resolve("./sidebarreferences.js"),
+      }),
+    ],
+    [
+      "content-docs",
+      /** @type {import('@docusaurus/plugin-content-docs').Options} */
+      ({
+        id: "templates",
+        path: "templates",
+        routeBasePath: "templates",
+        sidebarPath: require.resolve("./sidebartemplates.js"),
+      }),
+    ],
+  ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -68,11 +98,34 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
+            label: "Documents",
           },
-          { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            to: "/code-snippets/intro",
+            docId: "intro",
+            label: "Code-Snippets",
+            position: "left",
+          },
+          {
+            to: "/cheat-sheets/intro",
+            docId: "intro",
+            label: "Cheat-Sheets",
+            position: "left",
+          },
+          {
+            to: "/templates/intro",
+            docId: "intro",
+            label: "Templates",
+            position: "left",
+          },
+          {
+            to: "/references/intro",
+            docId: "intro",
+            label: "References",
+            position: "left",
+          },
+          {
+            href: "https://github.com/meisterveda/documentation",
             label: "GitHub",
             position: "right",
           },
@@ -88,6 +141,22 @@ const config = {
                 label: "Tutorial",
                 to: "/docs/intro",
               },
+              {
+                label: "Code-Snippets",
+                to: "/code-snippets/intro",
+              },
+              {
+                label: "Cheat-Sheets",
+                to: "/cheat-sheets/intro",
+              },
+              {
+                label: "Templates",
+                to: "/templates/intro",
+              },
+              {
+                label: "References",
+                to: "/references/intro",
+              },
             ],
           },
           {
@@ -95,15 +164,19 @@ const config = {
             items: [
               {
                 label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                href: "https://stackoverflow.com/users/10208401/gustavo-cabezal",
               },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
+              // {
+              //   label: "Discord",
+              //   href: "https://discordapp.com/invite/docusaurus",
+              // },
               {
                 label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                href: "https://twitter.com/Meistervedasys",
+              },
+              {
+                label: "Linkedin",
+                href: "https://www.linkedin.com/in/gustavo-cabezal-sys/",
               },
             ],
           },
@@ -111,17 +184,17 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
+                label: "Portfolio",
+                href: "https://meisterveda.com",
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/meisterveda",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Meisterveda, Inc. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
