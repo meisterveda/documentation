@@ -43,7 +43,6 @@ const config = {
     ],
   ],
   plugins: [
-    "@aldridged/docusaurus-plugin-lunr",
     [
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
@@ -198,7 +197,7 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Meisterveda, Inc. Built with Docusaurus.`,
       },
       prism: {
-        theme: [lightCodeTheme, "@saucelabs/theme-github-codeblock"],
+        theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
     }),
