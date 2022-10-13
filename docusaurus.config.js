@@ -63,16 +63,16 @@ const config = {
         sidebarPath: require.resolve("./sidebarcheatsheets.js"),
       }),
     ],
-    [
-      "content-docs",
-      /** @type {import('@docusaurus/plugin-content-docs').Options} */
-      ({
-        id: "references",
-        path: "references",
-        routeBasePath: "references",
-        sidebarPath: require.resolve("./sidebarreferences.js"),
-      }),
-    ],
+    // [
+    //   "content-docs",
+    //   /** @type {import('@docusaurus/plugin-content-docs').Options} */
+    //   ({
+    //     id: "references",
+    //     path: "references",
+    //     routeBasePath: "references",
+    //     sidebarPath: require.resolve("./sidebarreferences.js"),
+    //   }),
+    // ],
     [
       "content-docs",
       /** @type {import('@docusaurus/plugin-content-docs').Options} */
