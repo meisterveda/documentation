@@ -119,12 +119,6 @@ const config = {
             position: "left",
           },
           {
-            to: "/references/intro",
-            docId: "intro",
-            label: "References",
-            position: "left",
-          },
-          {
             href: "https://github.com/meisterveda/documentation",
             label: "GitHub",
             position: "right",
