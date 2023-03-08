@@ -9,8 +9,8 @@ const config = {
   title: "Meisterveda Documentation",
   tagline:
     "Meisterveda Knowledge-base. You can find code-snippets, technical documentation, cheat-sheets, templates and command references for tools and technologies.",
-  url: "https://meisterveda.github.io/",
-  baseUrl: "/documentation/",
+  url: "https://documentation.meisterveda.com/",
+  baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
